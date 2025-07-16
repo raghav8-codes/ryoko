@@ -1,0 +1,111 @@
+.footer {
+  background: linear-gradient(145deg, #0d1b2a, #1b263b);
+  color: #ffffff;
+  padding: 30px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  margin-top: 40px;
+  border-top: 3px solid #00b4d8;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00b4d8;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #00b4d8;
+}
+
+.footer-middle {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #dddddd;
+}
+
+.footer-bottom {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 1px solid #2e3a59;
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #bbbbbb;
+}
+
+.social-icons a {
+  margin-left: 10px;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #bbbbbb;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00b4d8;
+}
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+
+  .explore-page,
+  .booking-page,
+  .auth-container {
+    padding: 1rem;
+  }
+
+  .package-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .package-card,
+  .car-card,
+  .hotel-card,
+  .flight-card,
+  .train-card {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+
+  .auth-card {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
