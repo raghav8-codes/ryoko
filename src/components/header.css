@@ -1,91 +1,71 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family:Arial, Helvetica, sans-serif;
-  background: linear-gradient(135deg, #F2F2F2, #F1FAEE);
-  color: #1D3557;
-  min-height: 100vh;
-}
 .header {
-  background-color:#004D40;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 1rem 2rem;
+  background: #2979ff;
+  color: white;
+  position: relative;
 }
 
 .logo {
-  font-size: 50px;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #FAFAFA;
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: italic;
 }
 
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Desktop Nav */
 .nav {
   display: flex;
-  gap: 50px;
+  gap: 1.5rem;
 }
 
 .nav-link {
+  color: white;
   text-decoration: none;
-  color: #FAFAFA;
-  font-size: 16px;
-  font-weight: bolder;
-  transition: color 0.3s ease;
+  font-weight: 500;
+  cursor: pointer;
 }
 
-.nav-link:hover {
-  color: #007bff;
+.logout-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
+
+/* Mobile Styles */
 @media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
+  .hamburger {
+    display: block;
   }
 
   .nav {
+    display: none;
     flex-direction: column;
-    gap: 10px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #2979ff;
+    width: 100%;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    z-index: 1000;
   }
 
-  .nav-link {
-    font-size: 1rem;
+  .nav.open {
+    display: flex;
   }
 
-  .explore-page,
-  .booking-page,
-  .auth-container {
-    padding: 1rem;
-  }
-
-  .package-list {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .package-card,
-  .car-card,
-  .hotel-card,
-  .flight-card,
-  .train-card {
-    width: 90%;
-    margin-bottom: 1rem;
-  }
-
-  .auth-card {
-    width: 90%;
-    padding: 1.5rem;
-  }
-
-  .footer {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
+  .nav-link,
+  .logout-btn {
+    width: 100%;
+    text-align: left;
   }
 }
