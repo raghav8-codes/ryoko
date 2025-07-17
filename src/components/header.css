@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* space between logo and nav/menu icon */
   align-items: center;
   padding: 1rem 2rem;
   background: #2979ff;
@@ -8,18 +8,21 @@
   position: relative;
 }
 
+/* Keep logo clean */
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
 }
 
+/* Hamburger should appear only on mobile */
 .hamburger {
   display: none;
   font-size: 2rem;
   cursor: pointer;
+  color: white;
 }
 
-/* Desktop Nav */
+/* Navigation links */
 .nav {
   display: flex;
   gap: 1.5rem;
@@ -40,7 +43,7 @@
   cursor: pointer;
 }
 
-/* Mobile Styles */
+/* Mobile styles */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -52,11 +55,11 @@
     position: absolute;
     top: 60px;
     left: 0;
-    background: #2979ff;
     width: 100%;
+    background: #2979ff;
     padding: 1rem 2rem;
     gap: 1rem;
-    z-index: 1000;
+    z-index: 999;
   }
 
   .nav.open {
